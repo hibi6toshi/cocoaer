@@ -81,6 +81,9 @@ README〜ER図作成：5/1 〆切
 β版をRUNTEQ内リリース（MVP）：5/20〆切  
 本番リリース：6月  
 
+■　画面遷移図
+https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv44a6duu7mhQc-1
+
 ■技術選定　:調査中
 
 - Rails7
