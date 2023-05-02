@@ -83,6 +83,82 @@ README〜ER図作成：5/1 〆切
 ■　画面遷移図
 https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv44a6duu7mhQc-1
 
+■　ER図
+![ER図](/cocoaer/er.drawio.png)
+[User]ユーザ情報マスタ
+  - name: ユーザの名前
+  - email: ユーザーのメールアドレス
+  - avatar: アバター画像
+  - crypted_password: ハッシュ化されたパスワード
+  - salt: ハッシュ時のsalt
+  - reset_password_token: パスワードリセット時のトークン
+  - reset_password_token_expires_at: パスワードリセット時のトークン作成日時
+  - reset_password_email_sent_at: パスワードリセットのメール送信日時
+  - access_count_to_reset_password_page: パスワードリセット画面にアクセスした回数
+
+[Target]ターゲット情報マスタ(例: 父・母・兄弟,etc...)
+  - value: ターゲット情報
+
+[Category]カテゴリマスタ(例： 食事・贈り物・旅行, etc...)
+  - value: カテゴリ情報
+
+[Article]孝行の記録情報
+  - user_id: 投稿者のユーザーID
+  - target_id: ターゲット情報のID
+  - category_id: カテゴリ情報のID
+  - days: 孝行の実施日数
+  - cost: 費用
+  - title: タイトル
+  - body: 詳細
+  - picture: 画像用
+
+[Forum]フォーラム機能
+  - user_id: 投稿者のユーザID
+  - target_id: ターゲット情報のID
+  - category_id: カテゴリ情報のID
+  - days: 孝行の実施日数
+  - cost: 予算
+  - title: タイトル
+  - body: 詳細
+
+[Project]プロジェクト機能
+  - user_id: 投稿者のユーザID
+  - target_id: ターゲット情報のID
+  - category_id: カテゴリ情報のID
+  - limit_date: 締切日
+  - cost: 予算
+  - title: タイトル
+  - body: 詳細
+
+[Comment]Article/Forumに対するコメント
+  - commentable_type: Article or Forum
+  - commentable_id: Article or ForumのID
+  - user_id: コメントをしたユーザのID
+  - body: コメント内容
+
+
+[Favorite]Article/Forum/Projectに対するお気に入り
+  - favoritable_type: Article or Forum or Project
+  - favoritable_id: Article or Forum or ProjectのID
+  - user_id: お気に入りをしたユーザのID
+
+[Task]プロジェクトのタスク
+  - user_id: タスクを作成したユーザのID
+  - project_id: タスク対象のプロジェクトID
+  - sort_number: 画面での表示順
+  - value: タスク内容
+
+[Action]プロジェクトでの行動記録
+  - user_id: アクションを作成したユーザのID
+  - project_id: アクション対象のプロジェクトID
+  - sort_number: 画面での表示順
+  - value: アクション内容
+
+[Apikey]トークン認証用のトークンテーブル
+  - user_id: 認証対象のユーザ
+  - access_token: トークン
+  - expires_at: トークン有効期限
+
 ■技術選定　:調査中
 
 - Rails7
