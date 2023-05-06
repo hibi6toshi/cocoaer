@@ -84,7 +84,7 @@ README〜ER図作成：5/1 〆切
 https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv44a6duu7mhQc-1
 
 ■　ER図
-![ER図](/cocoaer/er.drawio.png)
+![ER図](/er.drawio.png)
 [User]ユーザ情報マスタ
   - name: ユーザの名前
   - sub: auth0から払い出されるuserIdを格納する
