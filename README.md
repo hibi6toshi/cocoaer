@@ -87,20 +87,15 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
 ![ER図](/cocoaer/er.drawio.png)
 [User]ユーザ情報マスタ
   - name: ユーザの名前
-  - email: ユーザーのメールアドレス
+  - sub: auth0から払い出されるuserIdを格納する
   - avatar: アバター画像
-  - crypted_password: ハッシュ化されたパスワード
-  - salt: ハッシュ時のsalt
-  - reset_password_token: パスワードリセット時のトークン
-  - reset_password_token_expires_at: パスワードリセット時のトークン作成日時
-  - reset_password_email_sent_at: パスワードリセットのメール送信日時
-  - access_count_to_reset_password_page: パスワードリセット画面にアクセスした回数
+  
 
-[Target]ターゲット情報マスタ(例: 父・母・兄弟,etc...)
-  - value: ターゲット情報
+[Piety_Target]ターゲット情報マスタ(例: 父・母・兄弟,etc...)
+  - name: ターゲット情報
 
-[Category]カテゴリマスタ(例： 食事・贈り物・旅行, etc...)
-  - value: カテゴリ情報
+[Piety_Category]カテゴリマスタ(例： 食事・贈り物・旅行, etc...)
+  - name: カテゴリ情報
 
 [Article]孝行の記録情報
   - user_id: 投稿者のユーザーID
@@ -153,11 +148,6 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
   - project_id: アクション対象のプロジェクトID
   - sort_number: 画面での表示順
   - value: アクション内容
-
-[Apikey]トークン認証用のトークンテーブル
-  - user_id: 認証対象のユーザ
-  - access_token: トークン
-  - expires_at: トークン有効期限
 
 ■技術選定　:調査中
 
