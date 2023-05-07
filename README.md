@@ -85,19 +85,19 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
 
 ■　ER図
 ![ER図](/er.drawio.png)
-[User]ユーザ情報マスタ
+[Users]ユーザ情報マスタ
   - name: ユーザの名前
   - sub: auth0から払い出されるuserIdを格納する
   - avatar: アバター画像
   
 
-[Piety_Target]ターゲット情報マスタ(例: 父・母・兄弟,etc...)
+[Piety_Targets]ターゲット情報マスタ(例: 父・母・兄弟,etc...)
   - name: ターゲット情報
 
-[Piety_Category]カテゴリマスタ(例： 食事・贈り物・旅行, etc...)
+[Piety_Categorys]カテゴリマスタ(例： 食事・贈り物・旅行, etc...)
   - name: カテゴリ情報
 
-[Article]孝行の記録情報
+[Articles]孝行の記録情報
   - user_id: 投稿者のユーザーID
   - target_id: ターゲット情報のID
   - category_id: カテゴリ情報のID
@@ -107,7 +107,7 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
   - body: 詳細
   - picture: 画像用
 
-[Forum]フォーラム機能
+[Forums]フォーラム機能
   - user_id: 投稿者のユーザID
   - target_id: ターゲット情報のID
   - category_id: カテゴリ情報のID
@@ -116,7 +116,7 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
   - title: タイトル
   - body: 詳細
 
-[Project]プロジェクト機能
+[Projects]プロジェクト機能
   - user_id: 投稿者のユーザID
   - target_id: ターゲット情報のID
   - category_id: カテゴリ情報のID
@@ -125,25 +125,25 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
   - title: タイトル
   - body: 詳細
 
-[Comment]Article/Forumに対するコメント
+[Comments]Article/Forumに対するコメント
   - commentable_type: Article or Forum
   - commentable_id: Article or ForumのID
   - user_id: コメントをしたユーザのID
   - body: コメント内容
 
 
-[Favorite]Article/Forum/Projectに対するお気に入り
+[Favorites]Article/Forum/Projectに対するお気に入り
   - favoritable_type: Article or Forum or Project
   - favoritable_id: Article or Forum or ProjectのID
   - user_id: お気に入りをしたユーザのID
 
-[Task]プロジェクトのタスク
+[Tasks]プロジェクトのタスク
   - user_id: タスクを作成したユーザのID
   - project_id: タスク対象のプロジェクトID
   - sort_number: 画面での表示順
   - value: タスク内容
 
-[Action]プロジェクトでの行動記録
+[Actions]プロジェクトでの行動記録
   - user_id: アクションを作成したユーザのID
   - project_id: アクション対象のプロジェクトID
   - sort_number: 画面での表示順
