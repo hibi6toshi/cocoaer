@@ -139,6 +139,10 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
   - project_id: アクション対象のプロジェクトID
   - value: アクション内容
 
+■　インフラ構成図：ECR + ECSは省略。
+
+![インフラ構成図](/infra.drawio.png)
+
 ## 主な使用技術
 ### バックエンド
 - Ruby on Rails(APIモード)
@@ -154,8 +158,5 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
 
 ### インフラ
 - フロントエンド：S3 + CloudFront
-- バックエンド: ECR + ECS
+- バックエンド: ECR + ECS + AWS Fragate
 - 画像ストレージ: S3
-
-### 進捗・障害管理
-- スプレッドシート
