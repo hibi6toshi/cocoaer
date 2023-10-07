@@ -72,14 +72,6 @@
 調べてもランキングや広告のサイトが多く、具体的にどういうものが良いのわからなかった。
 その時にさまざまな選択肢があればと感じ、孝行を投稿するSNSがあればいいと思ったから。
 
-■スケジュール
-
-企画〜技術調査：5/1〆切  
-README〜ER図作成：5/1 〆切  
-メイン機能実装：5/1 - 5/15  
-β版をRUNTEQ内リリース（MVP）：5/20〆切  
-本番リリース：6月  
-
 ■　画面遷移図
 https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv44a6duu7mhQc-1
 
@@ -149,11 +141,23 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
   - sort_number: 画面での表示順
   - value: アクション内容
 
-■技術選定　:調査中
+## 主な使用技術
+### バックエンド
+- Ruby on Rails(APIモード)
+- MySQL
 
-- Rails7
-- postgresql
-- React（仮） 
-  - <調査中>:認証まわりを調べる。トークンをクッキーor外部認証サービス（Auth0?）
-- tailwind or Bootstrap 
-  - <調査中>:tailwind でスピーディに開発できそうか？　
+### フロントエンド
+- React
+- TypeScript
+- tailwind
+
+### 認証
+- Auth0
+
+### インフラ
+- フロントエンド：S3 + CloudFront
+- バックエンド: ECR + ECS
+- 画像ストレージ: S3
+
+### 進捗・障害管理
+- スプレッドシート
