@@ -147,11 +147,14 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
 ### バックエンド
 - Ruby on Rails(APIモード)
 - MySQL
+- Rspec
 
 ### フロントエンド
 - React
 - TypeScript
-- tailwind
+- Tailwind
+- Jest
+- React Testing Library 
 
 ### 認証
 - Auth0
