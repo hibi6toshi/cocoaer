@@ -72,25 +72,17 @@
 調べてもランキングや広告のサイトが多く、具体的にどういうものが良いのわからなかった。
 その時にさまざまな選択肢があればと感じ、孝行を投稿するSNSがあればいいと思ったから。
 
-■スケジュール
-
-企画〜技術調査：5/1〆切  
-README〜ER図作成：5/1 〆切  
-メイン機能実装：5/1 - 5/15  
-β版をRUNTEQ内リリース（MVP）：5/20〆切  
-本番リリース：6月  
-
 ■　画面遷移図
 https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv44a6duu7mhQc-1
 
-■　ER図
+■　ER図：上段はマスタ系、それ以外はトランザクション系です。
 ![ER図](/er.drawio.png)
 [Users]ユーザ情報マスタ
   - name: ユーザの名前
   - sub: auth0から払い出されるuserIdを格納する
   - avatar: アバター画像
+  - introduction: 自己紹介
   
-
 [Piety_Targets]ターゲット情報マスタ(例: 父・母・兄弟,etc...)
   - name: ターゲット情報
 
@@ -140,20 +132,34 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
 [Tasks]プロジェクトのタスク
   - user_id: タスクを作成したユーザのID
   - project_id: タスク対象のプロジェクトID
-  - sort_number: 画面での表示順
   - value: タスク内容
 
 [Actions]プロジェクトでの行動記録
   - user_id: アクションを作成したユーザのID
   - project_id: アクション対象のプロジェクトID
-  - sort_number: 画面での表示順
   - value: アクション内容
 
-■技術選定　:調査中
+■　インフラ構成図：ECR + ECSは省略。
 
-- Rails7
-- postgresql
-- React（仮） 
-  - <調査中>:認証まわりを調べる。トークンをクッキーor外部認証サービス（Auth0?）
-- tailwind or Bootstrap 
-  - <調査中>:tailwind でスピーディに開発できそうか？　
+![インフラ構成図](/infra.drawio.png)
+
+## 主な使用技術
+### バックエンド
+- Ruby on Rails(APIモード)
+- MySQL
+- Rspec
+
+### フロントエンド
+- React
+- TypeScript
+- Tailwind
+- Jest
+- React Testing Library 
+
+### 認証
+- Auth0
+
+### インフラ
+- フロントエンド：S3 + CloudFront
+- バックエンド: ECR + ECS + AWS Fragate
+- 画像ストレージ: S3
