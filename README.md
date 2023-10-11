@@ -76,7 +76,7 @@
 https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv44a6duu7mhQc-1
 
 ■　ER図：上段はマスタ系、それ以外はトランザクション系です。
-![ER図](/er.drawio.png)
+![ER図](/resources/er.drawio.png)
 [Users]ユーザ情報マスタ
   - name: ユーザの名前
   - sub: auth0から払い出されるuserIdを格納する
@@ -141,7 +141,7 @@ https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv4
 
 ■　インフラ構成図：ECR + ECSは省略。
 
-![インフラ構成図](/infra.drawio.png)
+![インフラ構成図](/resources/infra.drawio.png)
 
 ## 主な使用技術
 ### バックエンド
