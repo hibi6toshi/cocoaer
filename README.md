@@ -37,7 +37,7 @@ https://web.cocoaer.net/
 | 表示  | 投稿/編集 |
 ![favorite](/resources/favorite.gif)
 
-
+## 設計資料
 
 ■　画面遷移図
 https://www.figma.com/file/fsUtM0ocbfR2CHklVjkkZC/Untitled?node-id=0%3A1&t=rIkv44a6duu7mhQc-1
