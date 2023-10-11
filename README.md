@@ -34,7 +34,7 @@ https://web.cocoaer.net/
 
 ### お気に入り一覧
 
-| 表示  | 投稿/編集 |
+お気に入りしたものは、お気に入り一覧から確認することができます。
 ![favorite](/resources/favorite.gif)
 
 ## 設計資料
