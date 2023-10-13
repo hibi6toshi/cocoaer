@@ -1,7 +1,7 @@
 # Cocoaer
 ![サービスロゴ](/resources/Cocoaer_logo.jpeg)
 
-孝行をもっと身近に、手軽に。  
+孝行をもっと身近に、手軽に、カジュアルに。  
 孝行に特化したCGMです。
 
 ▼**サービス URL**
